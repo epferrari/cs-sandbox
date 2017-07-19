@@ -1,14 +1,14 @@
 
 export default function bubbleSort<T>(arr: T[]): T[] {
-  let j, k, a, b, 
+  let i, j, a, b, 
       len = arr.length,
       swaps;
   while(len--) {
     swaps = false;
-    for(j = 0, k = j + 1; j < len; j++) {
-      if((a = arr[j]) > (b = arr[k])) {
+    for(j = 0; j < len; j++) {
+      if((a = arr[j]) > (b = arr[j + 1])) {
         arr[j] = b;
-        arr[k] = a;
+        arr[j + 1] = a;
         swaps = true;
       }
     }
