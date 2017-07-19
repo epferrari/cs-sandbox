@@ -6,4 +6,4 @@ export {
   selectionSort
 };
 
-export type Sorter = <T>(arr: T[]) => T[];
+export type Sorter = (arr: number[]) => number[];

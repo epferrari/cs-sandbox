@@ -1,17 +1,21 @@
-export default function selectionSort<T>(arr: T[]): T[] {
-  let len = arr.length, i, j, k, m, min, minIndex;
-  for(i = 0; i < len; i++) {
-    min = arr[i], minIndex = i;
-    for(j = i, k = len - j, m = j + 1; j < k; j++) {
-      if(arr[m] < min) {
-        min = arr[m];
-        minIndex = m;
+export default function selectionSort(arr: number[]): number[] {
+  let len: number = arr.length,
+      i = 0,
+      j: number,
+      mi: number,
+      temp: number;
+
+  for(i; i < len; i++) {
+    mi = i;
+    for(j = i+1; j < len; j++) {
+      if(arr[j] < arr[mi]) {
+        mi = j;
       }
     }
-    console.log('min', min);
-    let temp = arr[i];
-    arr[i] = min;
-    arr[minIndex] = temp;
+    
+    temp = arr[i];
+    arr[i] = arr[mi];
+    arr[mi] = temp;
   }
   return arr;
 }

@@ -1,5 +1,5 @@
 
-export default function bubbleSort<T>(arr: T[]): T[] {
+export default function bubbleSort(arr: number[]): number[] {
   let i, j, a, b, 
       len = arr.length,
       swaps;
